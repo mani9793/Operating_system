@@ -3,7 +3,6 @@ import java.util.*;
 
 public class Scheduling_1 {
 
-  /*  Scanner sc = new Scanner(System.in);
     static int i;
     static int n;
     float atat = 0, awt = 0;
