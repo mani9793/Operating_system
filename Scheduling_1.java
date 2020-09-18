@@ -225,7 +225,7 @@ public class Scheduling_1 {
             System.out.println("P" + p[i][0] + "        " + p[i][1] + "                 " + p[i][2] + "              " + c[i] + "              " + tat[i] + "                 " + wt[i] + "      ");
         }
         System.out.println("average turn around time :" + String.format("%.2f", (atat / n)));
-        System.out.println("average waiting time here :" + String.format("%.2f", (awt / n)));
+        System.out.println("average waiting time here once :" + String.format("%.2f", (awt / n)));
 
     }
 
