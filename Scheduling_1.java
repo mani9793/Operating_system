@@ -42,7 +42,7 @@ public class Scheduling_1 {
         switch (ch) {
             case 1:
                 //   if(isArrayEmpty(a)==0){
-                System.out.println("OOOOOOOOOKKKK");
+           
                 turnaroundtime(p, c);
                 waitingtime(tat, p);
                 break;
@@ -50,7 +50,7 @@ public class Scheduling_1 {
 
             //  else{
             case 2:
-                System.out.println("elseOOOOOKKKK");
+             
                 int col = 2;
                 sortbyColumn(p, col - 1);
                 turnaroundtime(p, c);
@@ -70,7 +70,7 @@ public class Scheduling_1 {
     }
 
     int[] turnaroundtime(int p[][], int c[]) {
-        System.out.println("OO--------");
+     
         c[0] = p[0][2];
         for (i = 1; i < n; i++) {
             //    for(int j=;j<n;j++)
@@ -97,7 +97,7 @@ public class Scheduling_1 {
     }
 
     int[] waitingtime(int tat[], int p[][]) {
-        System.out.println("---------KKKK");
+     
 
         for (i = 0; i < n; i++) {
             wt[i] = tat[i] - p[i][2];
