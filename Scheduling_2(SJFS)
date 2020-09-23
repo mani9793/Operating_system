@@ -1,0 +1,93 @@
+import java.util.*;
+import java.util.Arrays;
+
+public class Scheduling_2 {
+
+    Scanner sc = new Scanner(System.in);
+    static int i, j, n;
+    float atat = 0, awt = 0;
+    int p[] = new int[100];
+    int b[] = new int[100];
+    int a[] = new int[100];
+    int wt[] = new int[100];
+    int tat[] = new int[100];
+    int c[] = new int[100];
+
+    void getdata() {
+        System.out.println("enter no. of process :");
+        n = sc.nextInt();
+        for (i = 0; i < n; i++) {
+            System.out.println("enter process ID for process" + (i + 1) + ":");
+            p[i] = sc.nextInt();
+            System.out.println("enter arrival time for process  " + (i + 1) + ": ");
+            a[i] = sc.nextInt();
+            System.out.println("enter burst time for process " + (i + 1) + ": ");
+            b[i] = sc.nextInt();
+        }
+    }
+
+
+
+
+    void schedular() {
+        sort(b);
+        turnaroundtime(a, c);
+        waitingtime(tat, b);
+    }
+
+    void sort(int b[]) {
+        int t;
+        for (i = 0; i < n; i++) {
+            for (j = 0; j < n - i - 1; j++) {
+                if (b[j] > b[j + 1]) {
+                    t = b[j];
+                    b[j] = b[j + 1];
+                    b[j + 1] = t;
+
+                    t = p[j];
+                    p[j] = p[j + 1];
+                    p[j + 1] = t;
+                }
+            }
+        }
+    }
+
+    int[] turnaroundtime(int a[], int c[]) {
+        c[0] = b[0];
+        for (i = 1; i < n; i++) {
+            c[i] = c[i - 1] + b[i];
+        }
+        for (i = 0; i < n; i++) {
+            tat[i] = c[i] - a[i];
+        }
+        return tat;
+    }
+
+    int[] waitingtime(int tat[], int b[]) {
+        for (i = 0; i < n; i++) {
+            wt[i] = tat[i] - b[i];
+        }
+        return wt;
+    }
+
+    void printdata(int n) {
+
+        for (i = 0; i < n; i++) {
+            atat = atat + tat[i];
+            awt = awt + wt[i];
+        }
+        System.out.println("process" + " " + " arrival time " + "Burst time" + " " + " completion time" + " Turn around time" + " " + "waiting time");
+
+        for (i = 0; i < n; i++) {
+            System.out.println(+p[i] + "       " + a[i] + "               " + b[i] + "                     " + c[i] + "              " + tat[i] + "                 " + wt[i]);
+        }
+        System.out.println("average turn around time :" + String.format("%.2f", (atat / n)));
+        System.out.println("average waiting time  :" + String.format("%.2f", (awt / n)));
+    }
+    public static void main(String args[]) {
+        Scheduling_2 obj = new Scheduling_2();
+        obj.getdata();
+        obj.schedular();
+        obj.printdata(n);
+    }
+}
