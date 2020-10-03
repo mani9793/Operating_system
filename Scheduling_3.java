@@ -186,7 +186,6 @@ public class Scheduling_3 {
         obj.Schedule();
         obj.printScheduler();
         obj.waitingtime();
-     //   obj.turnaroundtime(p, c);
         obj.printwaitingtime();
     }
 }
