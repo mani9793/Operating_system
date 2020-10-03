@@ -157,6 +157,7 @@ public class Scheduling_3 {
     void printwaitingtime() {
         int waitingtimesum = 0;
         float awt;
+          System.out.println("-------------------------------- ");
         System.out.println("waiting time for each process\n");
         for ( i = 0; i < np; i++) {
             System.out.println(+(i + 1) + " " + p[i][3]);
