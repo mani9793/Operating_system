@@ -129,36 +129,6 @@ public class Scheduling_1 {
             }
         });
 
-        /*      for (i = 0; i <n; i++) { 
-            for (int j = 0; j < 3; j++) 
-                System.out.print(p[i][j] + " "); 
-            System.out.println(); 
-        } */
-/*}
-    void printdata(int n) {
-
-        for (i = 0; i < n; i++) {
-            atat = atat + tat[i];
-            awt = awt + wt[i];
-        }
-
-        System.out.println("process" + "    " + "arrival time      " + "burst time" + " " + "Completion time" + " " + " Turn around time" + " " + "waiting time");
-        for (i = 0; i < n; i++) {
-            System.out.println("P" + p[i][0] + "        " + p[i][1] + "                 " + p[i][2] + "              " + c[i] + "              " + tat[i] + "                 " + wt[i] + "      ");
-        }
-        System.out.println("average turn around time :" + String.format("%.2f", (atat / n)));
-        System.out.println("average waiting time  :" + String.format("%.2f", (awt / n)));
-
-    }
-
-    public static void main(String args[]) {
-
-        Scheduling_1 obj = new Scheduling_1();
-        obj.getdata();
-        obj.printdata(n);
-
-    }
-*/
   Scanner sc = new Scanner(System.in);
     static int i;
     static int n;
