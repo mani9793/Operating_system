@@ -40,14 +40,12 @@ public class Scheduling_1 {
         int ch = sc.nextInt();
         switch (ch) {
             case 1:
-                //   if(isArrayEmpty(a)==0){
+             
            
                 turnaroundtime(p, c);
                 waitingtime(tat, p);
                 break;
-            //   }
-
-            //  else{
+       
             case 2:
              
                 int col = 2;
@@ -55,7 +53,7 @@ public class Scheduling_1 {
                 turnaroundtime(p, c);
                 waitingtime(tat, p);
                 break;
-            // }
+          
         }
     }
 
