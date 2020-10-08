@@ -26,9 +26,6 @@ public class Scheduling_2 {
         }
     }
 
-
-
-
     void schedular() {
         sort(b);
         turnaroundtime(a, c);
