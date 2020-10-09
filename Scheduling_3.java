@@ -57,8 +57,7 @@ public class Scheduling_3 {
         }
         return tat;
     }
-    
-    
+   
     void addarrivedprocess() {
         for ( i = 0; i < np; i++) {
             if (p[i][0] == time) {
@@ -98,7 +97,6 @@ public class Scheduling_3 {
             if (arrivedpr[i] != toRun) {
                 temp[x] = arrivedpr[i];
                 x++;
-
             }
         }
         nap = nap - 1;
