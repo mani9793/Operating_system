@@ -177,6 +177,8 @@ public class Scheduling_3 {
         awt = waitingtimesum / (float) np;
         System.out.println("average waitng time " + awt);
     }
+    
+    
 
     public static void main(String args[]) {
         Scheduling_3 obj = new Scheduling_3();
