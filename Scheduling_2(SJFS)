@@ -60,12 +60,14 @@ public class Scheduling_2 {
         return tat;
     }
 
+
     int[] waitingtime(int tat[], int b[]) {
         for (i = 0; i < n; i++) {
             wt[i] = tat[i] - b[i];
         }
         return wt;
     }
+
 
     void printdata(int n) {
 
