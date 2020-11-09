@@ -68,7 +68,6 @@ public class Scheduling_2 {
         return wt;
     }
 
-
     void printdata(int n) {
 
         for (i = 0; i < n; i++) {
